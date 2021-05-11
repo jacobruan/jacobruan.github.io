@@ -42,7 +42,18 @@
                         </li><li>
                             <a class="menu-item" href="/categories/"> Categories </a>
                         </li></ul>
-                </nav><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </nav><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <span class="svg-icon icon-search"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <span class="svg-icon icon-cancel"></span>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <span class="svg-icon icon-loading"></span>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
@@ -57,7 +68,23 @@
                     <span></span><span></span><span></span>
                 </div>
             </div>
-            <div class="menu" id="menu-mobile"><nav>
+            <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                        <div class="search mobile" id="search-mobile">
+                            <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                                <span class="svg-icon icon-search"></span>
+                            </a>
+                            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                                <span class="svg-icon icon-cancel"></span>
+                            </a>
+                            <span class="search-button search-loading" id="search-loading-mobile">
+                                <span class="svg-icon icon-loading"></span>
+                            </span>
+                        </div>
+                        <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                            Cancel
+                        </a>
+                    </div><nav>
                     <h2 class="display-hidden">Основная навигация</h2>
                     <ul><li>
                             <a class="menu-item" href="/posts/" title="">Posts</a>
@@ -71,12 +98,25 @@
                     <span class="svg-icon icon-moon"></span>
                 </a></div>
         </div>
-    </div></header><main class="main">
+    </div><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div></header><main class="main">
                 <div class="container">
     
     <article class="page home" data-home="posts"><aside class="home-profile"><div class="home-meta"></div>
 </aside>
-<article itemscope itemtype="http://schema.org/Article">
+
+            <div class="post-sort">
+                <ol>
+                    <li><a href="/posts/">Все посты</a> </li>
+                    <li><a href="/">Основные посты</a></li>
+                    <li><a href="/views">Лучшее</a></li>
+                    <li><a href="/feed">Фид</a></li>
+                </ol>
+            </div><article itemscope itemtype="http://schema.org/Article">
     <div class="summary summary-animation" style="margin-bottom:0">
         <header><div style="padding-top: 20px;padding-left: 20px;padding-right: 20px;"><h2 class="summary-title" itemprop="name headline">
                     <a href="/posts/first_post/" target="_blank">First_post</a>
@@ -101,5 +141,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </aside><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script></body>
+        </aside><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
 </html>
